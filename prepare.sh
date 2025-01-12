@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo pacman -Syu
 sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel go
 
