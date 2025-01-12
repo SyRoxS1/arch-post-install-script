@@ -1,5 +1,5 @@
 sudo pacman -Syu
-sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g
+sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak
 
 git config --global user.name "SyRoxS1"
 
