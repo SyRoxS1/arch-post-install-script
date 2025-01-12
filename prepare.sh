@@ -52,7 +52,7 @@ for file in ~/workspace/yay/*; do
   fi
 done
 
-# Installing osu (ofc)
+# Installing osu (ofc) it works best with x11 protocol ( as of 12/01/25 )
 
 git clone https://github.com/NelloKudo/osu-winello.git
 cd osu-winello
