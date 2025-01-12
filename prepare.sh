@@ -1,5 +1,5 @@
 sudo pacman -Syu
-sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel
+sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel go
 
 git config --global user.name "SyRoxS1"
 
@@ -22,11 +22,31 @@ cd mullvad-vpn-bin
 makepkg
 
 
-for file in "$DIR"/mullvad-vpn-bin-*.pkg.tar.zst; do
-  if [[ "$file" != *"-debug"* ]]; then
+# Regex pattern for the desired file format
+PATTERN-MULL="^mullvad-vpn-bin-[0-9]+\.[0-9]+-[0-9]+-x86_64\.pkg\.tar\.zst$"
+
+for file in ~/workspace/mullvad-vpn-bin/*; do
+  if [[ $(basename "$file") =~ $PATTERN-MULL ]]; then
     echo "Running file: $file"
     sudo pacman -U --noconfirm "$file"
     break
+  fi
+done
+
+# Installing yay
+
+cd ~/workspace
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg
+
+PATTERN-YAY="^yay-[0-9]+\.[0-9]+\.[0-9]+-[0-9]+-x86_64\.pkg\.tar\.zst$"
+# Loop through all files in the directory
+for file in ~/workspace/yay/*; do
+  if [[ $(basename "$file") =~ $PATTERN ]]; then
+    echo "Running file: $file"
+    sudo pacman -U --noconfirm "$file"
+    break 
   fi
 done
 
