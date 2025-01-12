@@ -1,6 +1,11 @@
 sudo pacman -Syu
 sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g
 
+git config --global user.name "SyRoxS1"
+
+echo Write your email for git config
+read email
+git config --global user.email "$email"
 
 # https://github.com/lutris/docs/blob/master/InstallingDrivers.md intel 32 bits driver
 
