@@ -4,7 +4,7 @@
 sudo pacman -Syu
 
 # apps I may or may not use
-sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel go qbittorrent spotify steam adobe-source-han-serif-jp-fonts adobe-source-han-sans-jp-fonts-2.004-2
+sudo pacman -S --needed --noconfirm git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel go qbittorrent spotify steam adobe-source-han-serif-jp-fonts adobe-source-han-sans-jp-fonts-2.004-2
 
 git config --global user.name "SyRoxS1"
 
