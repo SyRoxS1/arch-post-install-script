@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# update as alway (i'm pressure it update the arch version so hm be careful ?)
 sudo pacman -Syu
-sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel go
+
+# apps I may or may not use
+sudo pacman -S --needed git vscode discord keepassxc unzip ntfs-3g flatpak veracrypt base-devel go qbittorrent spotify steam adobe-source-han-serif-jp-fonts adobe-source-han-sans-jp-fonts-2.004-2
 
 git config --global user.name "SyRoxS1"
 
@@ -11,7 +14,12 @@ git config --global user.email "$email"
 
 # https://github.com/lutris/docs/blob/master/InstallingDrivers.md intel 32 bits driver
 
-sudo pacman -S --needed --noconfirm lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
+sudo pacman -S --needed --noconfirm lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader 
+
+
+
+
+sudo pacman -S --needed --noconfirm 
 
 mkdir ~/workspace
 
@@ -51,6 +59,10 @@ for file in ~/workspace/yay/*; do
     break 
   fi
 done
+
+# I wanted to add locale-gen but idk how to do it :x
+
+
 
 # Installing osu (ofc) it works best with x11 protocol ( as of 12/01/25 )
 
